@@ -1,6 +1,9 @@
-use std::io::stdin;
-mod Calculate_pnl;
-mod Data_Helper;
+//use std::io::stdin;
+pub mod Calculate_pnl;
+use crate::Calculate_pnl::Position::Position;
+use crate::Calculate_pnl::SubAccount::SubAccount;
+
+//mod Data_Helper;
 
 // enum PnlState {
 //     Realized,
@@ -311,6 +314,8 @@ mod Data_Helper;
 
 fn main(){
     println!("Hello, world!");
+    let testing: Position = Position;
+    testing.update("a",1,1,1);
     // let mut input = String::new();
     // stdin().read_line(&mut input).ok().expect("Failed to read");
     // let n: i32 = match input.trim().parse(){
