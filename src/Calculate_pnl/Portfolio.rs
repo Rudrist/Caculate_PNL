@@ -1,8 +1,13 @@
-use crate::Calculate_pnl::SubAccount::SubAccount;
-
-pub struct Portfolio;
-impl SubAccount for Portfolio {
-    // pub fn update(&self, child: &str, id: i32, time: usize, mark_price: i32) {
-    //     self.update(child, id, time, mark_price);
-    // }
+use crate::Calculate_pnl::Pnl_Alg::Pnl_Alg;
+pub struct Portfolio{
+    Alg: Pnl_Alg,
+}
+impl Portfolio {
+    pub fn new() -> Portfolio{
+        Portfolio {Alg: Pnl_Alg::new() }
+    }
+    pub fn update(&self) {
+        //self.update(child, id, time, mark_price);
+        println!("test output: Portfolio");
+    }    
 }

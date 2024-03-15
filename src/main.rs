@@ -1,7 +1,11 @@
 //use std::io::stdin;
 pub mod Calculate_pnl;
 use crate::Calculate_pnl::Position::Position;
-use crate::Calculate_pnl::SubAccount::SubAccount;
+use crate::Calculate_pnl::Quotation::Quotation;
+use crate::Calculate_pnl::Portfolio::Portfolio;
+use crate::Calculate_pnl::Order::Order;
+use crate::Calculate_pnl::Account::Account;
+use crate::Calculate_pnl::Pnl_Alg::Pnl_Alg;
 
 //mod Data_Helper;
 
@@ -314,8 +318,17 @@ use crate::Calculate_pnl::SubAccount::SubAccount;
 
 fn main(){
     println!("Hello, world!");
-    let testing: Position = Position;
-    testing.update("a",1,1,1);
+    let testing: Position = Position::new();
+    testing.update();
+
+    let testing2: Quotation = Quotation::new();
+    testing2.update();
+
+    let testing3: Portfolio = Portfolio::new();
+    testing3.update();
+
+    let testing4: Account = Account::new();
+    testing4.update();
     // let mut input = String::new();
     // stdin().read_line(&mut input).ok().expect("Failed to read");
     // let n: i32 = match input.trim().parse(){

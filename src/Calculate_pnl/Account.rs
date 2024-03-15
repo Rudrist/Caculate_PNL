@@ -1,8 +1,14 @@
-use crate::Calculate_pnl::SubAccount::SubAccount;
+use crate::Calculate_pnl::Pnl_Alg::Pnl_Alg;
 
-pub struct Account;
-impl SubAccount for Account {
-    // pub fn update(&self, child: &str, id: i32, time: usize, mark_price: i32) {
-    //     self.update(child, id, time, mark_price);
-    // }
+pub struct Account{
+    Alg: Pnl_Alg,
+}
+impl Account {
+    pub fn new() -> Account{
+        Account {Alg: Pnl_Alg::new() }
+    }
+    pub fn update(&self) {
+        //self.update(child, id, time, mark_price);
+        println!("test output: Account");
+    }   
 }

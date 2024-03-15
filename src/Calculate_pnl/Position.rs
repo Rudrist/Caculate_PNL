@@ -1,14 +1,17 @@
-use crate::Calculate_pnl::SubAccount::SubAccount;
-
-pub struct Position;
-impl SubAccount for Position {
-    fn update(&self, child: &str, id: i32, time: usize, mark_price: i32) {
-        //self.update(child, id, time, mark_price);
-        println!("test output");
-    }
+use crate::Calculate_pnl::Pnl_Alg::Pnl_Alg;
+pub struct Position{
+    Alg: Pnl_Alg,
 }
 
 impl Position{
+    pub fn new() -> Position{
+        Position {Alg: Pnl_Alg::new() }
+    }
+    pub fn update(&self) {
+        //self.update(child, id, time, mark_price);
+        println!("test output: position");
+    }
+
     // fn every_day_update(&self, id: i32, mark_price: i32) {
     //     let mut algs = data_helper::get_data("position", id); // 假設 get_data 回傳 Vec<CalPnlAlg>
         

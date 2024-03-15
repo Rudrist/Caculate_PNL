@@ -1,17 +1,4 @@
-use crate::Calculate_pnl::Order_state::OrderState;
-
-pub struct CalPnlAlg {
-    id: i32,
-    belong_id: i32,
-    state: OrderState,
-    side: bool,
-    amount: i32,
-    price: i32,
-    fee: i32,
-    profit: i32,
-    sell: i32,
-    time_stamp: usize,
-    lifo_order_id: i32, ////
+pub struct Pnl_Alg {
     incoming_pnl: i32,
     incoming_amount: i32,
     incoming_profit: i32,
@@ -32,20 +19,9 @@ pub struct CalPnlAlg {
     net_pnl: i32,
 }
 
-impl CalPnlAlg{
-    pub fn new() -> CalPnlAlg{
-        CalPnlAlg{
-            id: 0,
-            belong_id: 0,
-            state: OrderState::Pending,
-            side: false,
-            amount: 0,
-            price: 0,
-            fee: 0,
-            profit: 0,
-            sell: 0,
-            time_stamp: 0,
-            lifo_order_id: 0, ////
+impl Pnl_Alg{
+    pub fn new() -> Pnl_Alg{
+        Pnl_Alg{
             incoming_pnl: 0,
             incoming_amount: 0,
             incoming_profit: 0,
